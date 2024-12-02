@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mzhitnik <mzhitnik@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 10:37:10 by mzhitnik          #+#    #+#             */
+/*   Updated: 2024/12/02 12:21:56 by mzhitnik         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {   
-    if (write(fd, &c, 1) == 1)
-      return (1);
-    return (-1);
+	if (write(fd, &c, 1) == 1)
+		return (1);
+	return (-1);
 }
