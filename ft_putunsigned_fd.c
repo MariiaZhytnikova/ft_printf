@@ -6,21 +6,23 @@
 /*   By: mzhitnik <mzhitnik@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 10:37:23 by mzhitnik          #+#    #+#             */
-/*   Updated: 2024/12/02 12:22:06 by mzhitnik         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:17:45 by mzhitnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putunsigned_fd(unsigned int n, int fd)
+int	ft_putunsigned_fd(unsigned int n)
 {
 	int	count;
+	int	len;
 
 	count = 0;
+	len = 0;
 	if (n >= 10)
-		if (ft_putunsigned_fd(n / 10, fd) == -1)
-			return (-1);
-	if (ft_putchar_fd(n % 10 + '0', fd) == -1)
+		count = ft_putunsigned_fd(n / 10);
+	len = ft_putchar_fd(n % 10 + '0');
+	if (len < 0)
 		return (-1);
 	return (count + 1);
 }

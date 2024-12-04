@@ -6,15 +6,15 @@
 /*   By: mzhitnik <mzhitnik@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 10:37:10 by mzhitnik          #+#    #+#             */
-/*   Updated: 2024/12/02 12:21:56 by mzhitnik         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:16:06 by mzhitnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar_fd(char c, int fd)
-{   
-	if (write(fd, &c, 1) == 1)
+int	ft_putchar_fd(char c)
+{
+	if (write(1, &c, 1) == 1)
 		return (1);
 	return (-1);
 }
