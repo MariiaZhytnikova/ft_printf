@@ -25,7 +25,7 @@ static int	handle_format(char format, va_list args)
 	if (format == 'd' || format == 'i')
 		ret = ft_putnbr_fd(va_arg(args, int));
 	if (format == 'x' || format == 'X')
-		ret = ft_puthex_fd(va_arg(args, unsigned long int), format);
+		ret = ft_puthex_fd(va_arg(args, unsigned long), format);
 	if (format == 'u')
 		ret = ft_putunsigned_fd(va_arg(args, unsigned int));
 	if (format == '%')
