@@ -14,9 +14,16 @@
 
 int	ft_putstr_fd(char *s)
 {
+	int	len;
+	
 	if (!s)
 		return (ft_putstr_fd("(null)"));
-	if (write(1, s, ft_strlen(s)) == ft_strlen(s))
-		return (ft_strlen(s));
-	return (-1);
+	len = 0;
+	while (s[len])
+	{
+		if (write(1, &s[len], 1) == -1)
+			return (-1);
+		len++;
+	}
+	return (len);
 }
