@@ -15,20 +15,19 @@
 int	ft_puthex_fd(unsigned long nb, char format)
 {
 	int		count;
-	int		len;
 	char	*hex;
 
 	count = 0;
-	len = 0;
+	hex = NULL;
 	if (format == 'x')
 		hex = "0123456789abcdef";
 	else
 		hex = "0123456789ABCDEF";
 	if (nb >= 16)
 		count = ft_puthex_fd(nb / 16, format);
-	len = ft_putchar_fd(hex[nb % 16]);
-	if (len < 0)
+	if (ft_putchar_fd(hex[nb % 16]) < 0)
 		return (-1);
-	return (count + 1);
+	return (++count);
 }
+
 
