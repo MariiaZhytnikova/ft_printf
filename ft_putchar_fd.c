@@ -6,11 +6,11 @@
 /*   By: mzhitnik <mzhitnik@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 10:37:10 by mzhitnik          #+#    #+#             */
-/*   Updated: 2024/12/03 16:16:06 by mzhitnik         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:37:36 by mzhitnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <unistd.h>
 
 int	ft_putchar_fd(char c)
 {

@@ -6,7 +6,7 @@
 /*   By: mzhitnik <mzhitnik@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 10:37:13 by mzhitnik          #+#    #+#             */
-/*   Updated: 2024/12/03 16:16:32 by mzhitnik         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:29:42 by mzhitnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putnbr_fd(int nb)
 	int	len;
 
 	if (nb == -2147483648)
-		return (write(1, "-2147483648", 11));
+		return (ft_putstr_fd("-2147483648"));
 	count = 0;
 	if (nb < 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: mzhitnik <mzhitnik@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:20:07 by mzhitnik          #+#    #+#             */
-/*   Updated: 2024/12/04 11:51:13 by mzhitnik         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:35:24 by mzhitnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ static int	handle_format(char format, va_list args)
 	if (format == 's')
 		ret = ft_putstr_fd(va_arg(args, char *));
 	if (format == 'p')
-		ret = ft_putptr_fd(va_arg(args, unsigned long));
+		ret = ft_putptr_fd(va_arg(args, unsigned long long));
 	if (format == 'd' || format == 'i')
 		ret = ft_putnbr_fd(va_arg(args, int));
 	if (format == 'x' || format == 'X')
-		ret = ft_puthex_fd(va_arg(args, unsigned long), format);
+		ret = ft_puthex_fd(va_arg(args, unsigned int), format);
 	if (format == 'u')
 		ret = ft_putunsigned_fd(va_arg(args, unsigned int));
 	if (format == '%')
